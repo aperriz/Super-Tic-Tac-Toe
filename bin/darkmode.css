@@ -1,0 +1,47 @@
+*{
+	
+	-fx-background-color: #4a4844;
+	-fx-text-fill: white;
+	-fx-fill: white;
+	-fx-font-color: white;
+		
+}
+.button{
+	
+	-fx-background-color: grey;
+	-fx-margin-top: 20px;
+	
+}
+
+.radio-button .radio{
+	
+	-fx-background-color:white;
+	
+}
+.radio-button .radio .dot{
+	
+	-fx-background-color:white;
+	
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: blue;
+    -fx-background-insets: 0;
+}
+
+
+.titled-pane > .title {
+	
+	-fx-background-color: grey;
+	
+}
+
+.button:disabled{
+	
+	-fx-background-color:red;
+	
+}
+
+.enabled-button{
+	-fx-background-color:green;
+}
