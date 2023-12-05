@@ -6,7 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class home extends Application{
-
+	
+	public static Stage globalStage;
+	
 	@Override
 	   public void start(Stage stage) throws Exception {
 	      Parent root = 
@@ -16,6 +18,7 @@ public class home extends Application{
 	      stage.setTitle("Super Tic-Tac-Toe"); // displayed in window's title bar
 	      stage.setScene(scene); // attach scene to stage
 	      stage.show(); // display the stage
+	      globalStage = stage;
 	   }
 
 	   public static void main(String[] args) {

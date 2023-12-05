@@ -80,8 +80,6 @@ public class HomeController implements Initializable{
 
 		Parent root = FXMLLoader.load(getClass().getResource("SuperTicTacToe.fxml"));
 
-		Stage stage = (Stage) easyRadioButton.getScene().getWindow();
-
 		Scene scene = new Scene(root);
 
 		if(darkTheme) {
@@ -90,8 +88,8 @@ public class HomeController implements Initializable{
 
 		}
 
-		stage.setResizable(false);
-		stage.setScene(scene);
+		home.globalStage.setResizable(false);
+		home.globalStage.setScene(scene);
 
 	}
 
@@ -120,8 +118,6 @@ public class HomeController implements Initializable{
 
 		Parent root = FXMLLoader.load(getClass().getResource("Settings.fxml"));
 
-		Stage stage = (Stage) easyRadioButton.getScene().getWindow();
-
 		Scene scene = new Scene(root);
 
 		if(darkTheme) {
@@ -130,8 +126,8 @@ public class HomeController implements Initializable{
 
 		}
 
-		stage.setResizable(false);
-		stage.setScene(scene);
+		home.globalStage.setResizable(false);
+		home.globalStage.setScene(scene);
 
 	}
 

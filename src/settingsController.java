@@ -66,8 +66,6 @@ public class settingsController implements Initializable {
 
 		Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
 
-		Stage stage = (Stage) backButton.getScene().getWindow();
-
 		Scene scene = new Scene(root);
 		
 		if(themeGroup.getSelectedToggle().equals(darkRadio)){
@@ -80,7 +78,7 @@ public class settingsController implements Initializable {
 			
 		}
 
-		stage.setScene(scene);
+		home.globalStage.setScene(scene);
 		
 	}
 

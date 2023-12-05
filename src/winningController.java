@@ -26,13 +26,11 @@ public class winningController implements Initializable{
 		
 		Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
 
-		Stage stage = (Stage) resetButton.getScene().getWindow();
-
 		Scene scene = new Scene(root);
 		
 		scene.getStylesheets().setAll(resetButton.getScene().getStylesheets());
 		
-		stage.setScene(scene);
+		home.globalStage.setScene(scene);
 
 		
 	}

@@ -87,20 +87,18 @@ public class Controller implements Initializable{
 
 		Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
 
-		Stage stage = (Stage) resetButton.getScene().getWindow();
-
 		Scene scene = new Scene(root);
 		scene.getStylesheets().setAll(resetButton.getScene().getStylesheets());
 
-		stage.setScene(scene);
+		home.globalStage.setScene(scene);
 
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
-		System.out.println(player);
-		System.out.println(difficulty);
+		//System.out.println(player);
+		//System.out.println(difficulty);
 
 		sizeVar=74;
 
@@ -297,8 +295,8 @@ public class Controller implements Initializable{
 
 						gameWon = true;
 
-						System.out.println("Game Over!");
-						System.out.println("Winner: " + checkGameOver(gridList));
+						//System.out.println("Game Over!");
+						//System.out.println("Winner: " + checkGameOver(gridList));
 						break;
 
 					}
@@ -314,7 +312,7 @@ public class Controller implements Initializable{
 
 						setTurn(button);
 
-						System.out.println(button.getId());
+						//System.out.println(button.getId());
 
 						try {
 							Thread.sleep(delay);
@@ -334,7 +332,7 @@ public class Controller implements Initializable{
 								easyAi(next, currentList);
 							}
 							else if (difficulty == 'h') {
-								System.out.println('h');
+								//System.out.println('h');
 								hardAi(next, currentList);
 							}
 							else {
@@ -379,7 +377,7 @@ public class Controller implements Initializable{
 
 								int r = new Random().nextInt(0, 8);
 
-								System.out.println("else " + r);
+								//System.out.println("else " + r);
 
 								if(checkGridOver(allArrays.get(r)) == 'n') {
 
@@ -481,7 +479,7 @@ public class Controller implements Initializable{
 			try {
 				winner = checkGameOver(gridList);
 				
-				System.out.println("Winner: " + winner);
+				//System.out.println("Winner: " + winner);
 
 				for(ArrayList<Button> bl : allArrays) {
 					for(Button b: bl){
@@ -491,13 +489,11 @@ public class Controller implements Initializable{
 				
 				root = FXMLLoader.load(getClass().getResource("gameOver.fxml"));
 
-				Stage stage = (Stage) turnImage.getScene().getWindow();
-
 				Scene scene = new Scene(root);	
 
 				scene.getStylesheets().setAll(resetButton.getScene().getStylesheets());
 
-				stage.setScene(scene);
+				home.globalStage.setScene(scene);
 
 
 			} catch (IOException e) {
@@ -629,7 +625,7 @@ public class Controller implements Initializable{
 	//Finds corresponding grid for button, locks the rest. Only unlocks if game and appropriate grid aren't over
 	public void lockGrids(ArrayList<Button> enabledList, ArrayList<Button> currentList) {
 
-		System.out.println(checkGridOver(enabledList));
+		//System.out.println(checkGridOver(enabledList));
 
 		for(ArrayList<Button> g : allArrays) {
 
@@ -644,8 +640,8 @@ public class Controller implements Initializable{
 				}
 				else if(checkGridOver(currentList) != 'n' && checkGridOver(enabledList) != 'n') {
 
-					System.out.println("Current: " + checkGridOver(currentList));
-					System.out.println("Next: " + checkGridOver(enabledList));
+					//System.out.println("Current: " + checkGridOver(currentList));
+					//System.out.println("Next: " + checkGridOver(enabledList));
 					unlockAll();
 
 				}
@@ -710,8 +706,8 @@ public class Controller implements Initializable{
 
 			gameWon = true;
 
-			System.out.println("Game Over!");
-			System.out.println("Winner: " + checkGameOver(gridList));
+			//System.out.println("Game Over!");
+			//System.out.println("Winner: " + checkGameOver(gridList));
 
 		}
 		else {
@@ -772,8 +768,8 @@ public class Controller implements Initializable{
 
 			gameWon = true;
 
-			System.out.println("Game Over!");
-			System.out.println("Winner: " + checkGameOver(gridList));
+			//System.out.println("Game Over!");
+			//System.out.println("Winner: " + checkGameOver(gridList));
 
 		}
 		else {
@@ -840,8 +836,8 @@ public class Controller implements Initializable{
 
 					gameWon = true;
 
-					System.out.println("Game Over!");
-					System.out.println("Winner: " + checkGameOver(gridList));
+					//System.out.println("Game Over!");
+					//System.out.println("Winner: " + checkGameOver(gridList));
 					break;
 
 				}
@@ -910,7 +906,7 @@ public class Controller implements Initializable{
 			//If still ai turn, easyAi
 			if(turn % 2 == 0) {
 
-				System.out.println("hard -> easy");
+				//System.out.println("hard -> easy");
 
 				//if for loop fully completes, runs easyAi
 				easyAi(nextList, currentList);
