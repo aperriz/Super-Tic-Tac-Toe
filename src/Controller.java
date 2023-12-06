@@ -26,7 +26,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 public class Controller implements Initializable{
 
@@ -249,14 +248,7 @@ public class Controller implements Initializable{
 		for(ArrayList<Button> bList : allArrays) {
 
 			allButtons.addAll(bList);
-			//System.out.println(allButtons);
 
-			for(Button b: bList) {
-
-				//System.out.print(b.getId() + ", ");
-
-			}
-			//System.out.println();
 		}
 
 
@@ -953,11 +945,7 @@ public class Controller implements Initializable{
 
 		int returnValue = fileChooser.showSaveDialog(null);
 
-		String fileName = "";
-
-		if(returnValue == JFileChooser.APPROVE_OPTION) {
-
-			fileName = fileChooser.getSelectedFile().getName();
+		if(returnValue == JFileChooser.APPROVE_OPTION) {	
 
 			try {
 

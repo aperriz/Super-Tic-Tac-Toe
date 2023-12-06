@@ -13,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
-import javafx.stage.Stage;
 
 public class HomeController implements Initializable{
 
